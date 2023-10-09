@@ -11,3 +11,7 @@
 .prevent-scroll{
     overflow: hidden;
 }
+
+body{
+    all: none;
+}

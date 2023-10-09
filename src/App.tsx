@@ -10,7 +10,7 @@ function App() {
     !localStorage.getItem(LS_MODAL_KEY)
   );
   return (
-    <div className="App" style={{ minHeight: "100vh" }}>
+    <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
