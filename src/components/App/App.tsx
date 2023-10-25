@@ -16,14 +16,13 @@ export const App = () => {
       <header className="app__header">
         <img src={logo} className="app__logo" alt="logo" />
       </header>
-      {modalShown && (
-        <Modal
-          onClose={() => {
-            setModalShown(false);
-            localStorage.setItem(LS_MODAL_KEY, 'true');
-          }}
-        />
-      )}
+      <Modal
+        shown={modalShown}
+        onClose={() => {
+          localStorage.setItem(LS_MODAL_KEY, 'true');
+          setModalShown(false);
+        }}
+      />
     </div>
   );
 };

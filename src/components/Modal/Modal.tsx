@@ -4,9 +4,10 @@ import './Modal.css';
 
 interface ModalProps {
   onClose: VoidFunction;
+  shown: boolean;
 }
 
-export const Modal = ({ onClose }: ModalProps) => {
+export const Modal = ({ onClose, shown }: ModalProps) => {
   const [isSending, setIsSending] = useState(false);
 
   const handleClose = () => {
@@ -25,10 +26,10 @@ export const Modal = ({ onClose }: ModalProps) => {
   };
 
   return (
-    <ModalWrapper onClose={handleClose}>
+    <ModalWrapper onClose={handleClose} shown={shown}>
       <div className="modal">
         <h2 className="modal__title">
-          Do you want to receive news from{' '}
+          Do you want to receive news from {/* eslint-disable-next-line */}
           <a className="modal__link" href="#" aria-label="TM Team">
             TM-team
           </a>
